@@ -15,5 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag docker-registry.fliplabs.net/cicd-sreejith
-      run: docker push docker-registry.fliplabs.net/cicd-sreejith
+      run: docker build . --file Dockerfile --tag docker-registry.fliplabs.net/cicd-sreejith && docker push docker-registry.fliplabs.net/cicd-sreejith
+
