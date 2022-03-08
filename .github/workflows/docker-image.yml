@@ -15,7 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag industryapps.azurecr.io/cicd-test001
-           docker login -u "industryapps" -p "Xtqv4zRM/UGNOzVVbkTfd7Cj6ppuQTyZ" industryapps.azurecr.io
-           docker push industryapps.azurecr.io/cicd-test001
+      run: docker login -u "industryapps" -p "Xtqv4zRM/UGNOzVVbkTfd7Cj6ppuQTyZ" industryapps.azurecr.io && docker build . --file Dockerfile --tag industryapps.azurecr.io/cicd-test001 && docker push industryapps.azurecr.io/cicd-test001
 
