@@ -5,7 +5,7 @@ COPY . /usr/src/app/
 #COPY package*.json ./
 #RUN npm init -y
 RUN npm install
-RUN npm run build
+RUN ng build
 
 # Stage 2: Serve app with nginx server
 FROM nginx:latest
